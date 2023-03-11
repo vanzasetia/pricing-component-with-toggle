@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.button {
+  display: block;
+  border-radius: rem(6);
+  padding: rem(14);
+  font-size: rem(13);
+  letter-spacing: 0.1em;
+  text-decoration-color: transparent;
+  text-transform: uppercase;
+}
+
+.button--primary-gradient {
+  border: rem(1) solid hsl(237deg 63% 65%);
+  background-image: var(--primary-gradient);
+  color: var(--white);
+
+  @include hover {
+    background-image: none;
+    color: inherit;
+  }
+}
+
+.button--white:focus {
+  outline-color: var(--white);
+}
+
+.button--white {
+  border: rem(1) solid var(--white);
+  background-color: var(--white);
+  color: var(--soft-blue);
+
+  @include hover {
+    background-color: transparent;
+    color: inherit;
+  }
+}

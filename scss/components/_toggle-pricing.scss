@@ -1,0 +1,76 @@
+@use "../abstracts" as *;
+
+.toggle-pricing {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(240);
+}
+
+.toggle-pricing__legend {
+  margin-bottom: rem(40);
+  text-align: center;
+}
+
+.toggle-pricing__label {
+  cursor: pointer;
+
+  @include hover {
+    outline: 0.01rem solid;
+  }
+}
+
+.toggle-pricing__wrapper {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-right: rem(24);
+  margin-left: rem(24);
+  border-radius: 2em;
+  width: rem(56);
+  height: rem(32);
+}
+
+.toggle-pricing__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2em;
+  background-image: var(--primary-gradient);
+  width: 100%;
+  height: 100%;
+}
+
+.toggle-pricing__circle {
+  position: absolute;
+  top: rem(4);
+  left: 50%;
+  border-radius: 50%;
+  background-color: var(--white);
+  width: rem(24);
+  height: rem(24);
+
+  @include prefers-motion {
+    transition: left var(--primary-transition);
+  }
+}
+
+.toggle-pricing__radio {
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+  margin-right: -3px;
+  width: 50%;
+  height: 100%;
+}
+
+.toggle-pricing__radio:focus ~ .toggle-pricing__background {
+  outline: 0.3rem solid var(--soft-blue);
+  outline-offset: 0.6rem;
+}
+
+.toggle-pricing__radio[id="annually"]:checked ~ .toggle-pricing__circle {
+  left: rem(5);
+}

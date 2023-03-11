@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+.pricing {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: rem(24);
+  padding-left: rem(24);
+  max-width: rem(1100);
+}
+
+.pricing__title {
+  font-size: rem(32);
+  text-align: center;
+}
+
+.pricing__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(64);
+
+  @include breakpoint-up("tiny") {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}

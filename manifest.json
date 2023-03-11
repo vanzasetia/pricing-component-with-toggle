@@ -1,0 +1,24 @@
+{
+  "name": "Pricing Component with Toggle | Frontend Mentor Challenge",
+	"short_name": "Pricing Component with Toggle",
+	"description": "A junior level Frontend Mentor challenge. Built with HTML, CSS and JavaScript. Coded by Vanza Setia.",
+	"start_url": "/",
+  "id": "/",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/icon-large.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    },
+    {
+      "src": "/images/icon-large-maskable.png",
+      "type": "image/png",
+      "sizes": "1024x1024",
+      "purpose": "maskable"
+    }
+	]
+}

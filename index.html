@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Pricing Component with Toggle | Frontend Mentor Challenge</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/app.js" defer></script>
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons/favicon-16x16.png"
+    />
+    <link rel="icon" type="image/png" href="/images/icon-large.png" />
+    <link
+      rel="mask-icon"
+      href="/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta
+      name="description"
+      content="A junior level Frontend Mentor challenge. Built with HTML, CSS and JavaScript. Coded by Vanza Setia."
+    />
+    <meta name="url" content="https://sitepricingcomponent.netlify.app/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Pricing Component with Toggle | Frontend Mentor Challenge"
+    />
+    <meta property="og:site_name" content="Pricing Component with Toggle" />
+    <meta
+      property="og:description"
+      content="A junior level Frontend Mentor challenge. Built with HTML, CSS and JavaScript. Coded by Vanza Setia."
+    />
+    <meta
+      property="og:url"
+      content="https://sitepricingcomponent.netlify.app/"
+    />
+    <meta
+      property="og:image"
+      content="https://sitepricingcomponent.netlify.app/design/desktop-design.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@vanzasetia" />
+    <meta name="twitter:creator" content="@vanzasetia" />
+    <link rel="canonical" href="https://sitepricingcomponent.netlify.app/" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  </head>
+  <body dir="ltr">
+    <main class="pricing js-app">
+      <h1 class="pricing__title js-app-title">Our Pricing</h1>
+      <div class="pricing__container">
+        <div class="card">
+          <h2 class="card__title">Basic</h2>
+          <p class="card__price">
+            <span class="card__monthly-price js-monthly-price-text"
+              ><span class="card__dollar-sign">$</span>19.99<span
+                class="card__price-description js-hide-when-script-available"
+                >/month</span
+              ></span
+            ><span class="card__annually-price js-annually-price-text" hidden
+              ><span class="card__dollar-sign">$</span>199.99</span
+            >
+            <span
+              class="card__price-description display:block js-hide-when-script-available"
+              >or $199.99/year</span
+            >
+          </p>
+          <ul class="card__list">
+            <li class="card__item">500 GB Storage</li>
+            <li class="card__item">2 Users Allowed</li>
+            <li class="card__item">Send up to 3 GB</li>
+          </ul>
+          <a href="/" class="button button--primary-gradient">Learn More</a>
+        </div>
+        <div class="card card--highlight">
+          <h2 class="card__title">Professional</h2>
+          <p class="card__price">
+            <span class="card__monthly-price js-monthly-price-text"
+              ><span class="card__dollar-sign">$</span>24.99<span
+                class="card__price-description js-hide-when-script-available"
+                >/month</span
+              ></span
+            ><span class="card__annually-price js-annually-price-text" hidden
+              ><span class="card__dollar-sign">$</span>249.99</span
+            >
+            <span
+              class="card__price-description display:block js-hide-when-script-available"
+              >or $249.99/year</span
+            >
+          </p>
+          <ul class="card__list">
+            <li class="card__item">1 TB Storage</li>
+            <li class="card__item">5 Users Allowed</li>
+            <li class="card__item">Send up to 10 GB</li>
+          </ul>
+          <a href="/" class="button button--white">Learn More</a>
+        </div>
+        <div class="card">
+          <h2 class="card__title">Master</h2>
+          <p class="card__price">
+            <span class="card__monthly-price js-monthly-price-text"
+              ><span class="card__dollar-sign">$</span>39.99<span
+                class="card__price-description js-hide-when-script-available"
+                >/month</span
+              ></span
+            ><span class="card__annually-price js-annually-price-text" hidden
+              ><span class="card__dollar-sign">$</span>399.99</span
+            >
+            <span
+              class="card__price-description display:block js-hide-when-script-available"
+              >or $399.99/year</span
+            >
+          </p>
+          <ul class="card__list">
+            <li class="card__item">2 TB Storage</li>
+            <li class="card__item">10 Users Allowed</li>
+            <li class="card__item">Send up to 20 GB</li>
+          </ul>
+          <a href="/" class="button button--primary-gradient">Learn More</a>
+        </div>
+      </div>
+    </main>
+    <!-- TODO: Add attribution -->
+    <!-- <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.min.js");
+        });
+      }
+    </script> -->
+  </body>
+</html>
