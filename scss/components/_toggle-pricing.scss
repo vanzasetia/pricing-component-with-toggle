@@ -14,63 +14,71 @@
 
 .toggle-pricing__label {
   cursor: pointer;
-
-  @include hover {
-    outline: 0.01rem solid;
-  }
-}
-
-.toggle-pricing__wrapper {
   display: inline-block;
+  line-height: 2;
   position: relative;
-  vertical-align: middle;
-  margin-right: rem(24);
-  margin-left: rem(24);
-  border-radius: 2em;
-  width: rem(56);
+  z-index: 2;
+}
+
+.toggle-pricing__label--inline-start {
+  padding-right: 5em;
+}
+
+.toggle-pricing__label--inline-end {
+  margin-left: rem(-56);
+  padding-left: 5em;
+}
+
+.toggle-pricing__label--inline-start::before,
+.toggle-pricing__label--inline-start::after {
+  content: "";
   height: rem(32);
-}
-
-.toggle-pricing__background {
+  overflow: hidden;
   position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 2em;
-  background-image: var(--primary-gradient);
-  width: 100%;
-  height: 100%;
+  vertical-align: middle;
 }
 
-.toggle-pricing__circle {
+/* Wrapper */
+.toggle-pricing__label--inline-start::after {
+  border-radius: 2em;
+  margin: 0 rem(24);
+  width: rem(56);
+  background-image: var(--primary-gradient);
+}
+
+/* Circle */
+.toggle-pricing__label--inline-start::before {
   position: absolute;
   top: rem(4);
-  left: 50%;
-  border-radius: 50%;
-  background-color: var(--white);
+  right: -0.075em;
+  transform: translateX(0);
   width: rem(24);
   height: rem(24);
+  background-color: var(--white);
+  z-index: 2;
+  border-radius: 50%;
 
   @include prefers-motion {
-    transition: left var(--primary-transition);
+    transition: transform var(--primary-transition);
   }
 }
 
+/* Visually hide the radio input */
 .toggle-pricing__radio {
-  display: inline-block;
-  position: relative;
   opacity: 0;
+  position: absolute;
+}
+
+.toggle-pricing__radio--annually:checked
+  ~ .toggle-pricing__label--inline-start::before {
+  transform: translateX(rem(-24));
+}
+
+.toggle-pricing__radio--monthly:checked ~ .toggle-pricing__label--inline-end {
   z-index: 1;
-  cursor: pointer;
-  margin-right: -3px;
-  width: 50%;
-  height: 100%;
 }
 
-.toggle-pricing__radio:focus ~ .toggle-pricing__background {
-  outline: 0.3rem solid var(--soft-blue);
-  outline-offset: 0.6rem;
-}
-
-.toggle-pricing__radio[id="annually"]:checked ~ .toggle-pricing__circle {
-  left: rem(5);
+.toggle-pricing:focus-within .toggle-pricing__label--inline-start::after {
+  box-shadow: 0 0 0 0.15rem var(--very-light-grayish-blue),
+    0 0 0 0.3rem var(--soft-blue);
 }

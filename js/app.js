@@ -4,30 +4,28 @@
   const appTitle = app.querySelector(".js-app-title");
   const togglePricingMarkup = `
   <fieldset class="toggle-pricing">
-    <legend class="toggle-pricing__legend js-toggle-pricing-legend"></legend>
+    <legend
+      class="toggle-pricing__legend js-toggle-pricing-legend"
+    ></legend>
+    <input
+      type="radio"
+      name="pricing"
+      id="annually"
+      class="toggle-pricing__radio toggle-pricing__radio--annually js-toggle-pricing-radio"
+    />
     <label
       for="annually"
       class="toggle-pricing__label toggle-pricing__label--inline-start"
     >
       Annually
     </label>
-    <span class="toggle-pricing__wrapper">
-      <input
-        type="radio"
-        name="price"
-        id="annually"
-        class="toggle-pricing__radio js-toggle-pricing-radio"
-      />
-      <input
-        type="radio"
-        name="price"
-        id="monthly"
-        class="toggle-pricing__radio js-toggle-pricing-radio"
-        checked
-      />
-      <span class="toggle-pricing__background" aria-hidden="true"></span>
-      <span class="toggle-pricing__circle" aria-hidden="true"></span>
-    </span>
+    <input
+      type="radio"
+      name="pricing"
+      id="monthly"
+      class="toggle-pricing__radio toggle-pricing__radio--monthly js-toggle-pricing-radio"
+      checked
+    />
     <label
       for="monthly"
       class="toggle-pricing__label toggle-pricing__label--inline-end"
