@@ -1,27 +1,27 @@
 :root {
-  --very-light-grayish-blue: hsl(240, 78%, 98%);
-  --light-grayish-blue: hsl(234, 14%, 74%);
-  --grayish-blue: hsl(233, 13%, 49%);
-  --grayish-blue-light: hsla(233, 13%, 49%, 0.25);
-  --dark-grayish-blue: hsl(232, 13%, 33%);
-  --soft-blue: hsl(237, 63%, 64%);
+  --very-light-grayish-blue: hsl(240deg 78% 98%);
+  --light-grayish-blue: hsl(234deg 14% 74%);
+  --grayish-blue: hsl(233deg 13% 49%);
+  --grayish-blue-light: hsl(233deg 13% 49% / 25%);
+  --dark-grayish-blue: hsl(232deg 13% 33%);
+  --soft-blue: hsl(237deg 63% 64%);
   --primary-gradient: linear-gradient(
     135deg,
-    hsl(236, 72%, 79%) 0%,
+    hsl(236deg 72% 79%) 0%,
     var(--soft-blue) 100%
   );
-  --white: hsl(0, 0%, 100%);
-  --white-light: hsl(0, 0%, 100%, 0.25);
+  --white: hsl(0deg 0% 100%);
+  --white-light: hsl(0deg 0% 100% / 25%);
   --primary-transition: 200ms ease-in-out;
 }
 
 @font-face {
-  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
   src: local("Montserrat"), local("Montserrat Bold"), local("Montserrat-Bold"),
     url("/fonts/Montserrat-Bold.woff2") format("woff2");
+  font-family: Montserrat;
+  font-display: swap;
 }
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -51,18 +51,18 @@
 }
 
 body {
-  min-height: 100vh;
-  line-height: 1.5;
-  text-rendering: optimizeSpeed;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  background-color: var(--very-light-grayish-blue);
-  color: var(--dark-grayish-blue);
   background-image: url("/svg/bg-top.svg"), url("/svg/bg-bottom.svg");
   background-position: top right, bottom left;
+  background-color: var(--very-light-grayish-blue);
   padding-top: 4.4375rem;
   padding-bottom: 4.4375rem;
+  min-height: 100vh;
+  color: var(--dark-grayish-blue);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  font-family: Montserrat, sans-serif;
+  text-rendering: optimizeSpeed;
 }
 
 input,
@@ -92,16 +92,16 @@ ul {
 }
 
 .pricing {
-  max-width: 68.75rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  max-width: 68.75rem;
 }
 
 .pricing__title {
-  text-align: center;
   font-size: 2rem;
+  text-align: center;
 }
 
 .pricing__container {
@@ -112,8 +112,8 @@ ul {
 @media screen and (min-width: 63.125rem) {
   .pricing__container {
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 }
 
@@ -130,92 +130,88 @@ ul {
 }
 
 .toggle-pricing__label {
-  cursor: pointer;
-}
-@media (hover: none) {
-  .toggle-pricing__label {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  .toggle-pricing__label:active {
-    outline: 0.01rem solid;
-  }
-}
-@media (-ms-high-contrast: none),
-  (-ms-high-contrast: active),
-  (-moz-touch-enabled: 0),
-  (hover: hover) {
-  .toggle-pricing__label:hover {
-    outline: 0.01rem solid;
-  }
-}
-
-.toggle-pricing__wrapper {
-  position: relative;
   display: inline-block;
-  width: 3.5rem;
-  height: 2rem;
-  vertical-align: middle;
-  border-radius: 2em;
-  margin-right: 1.5rem;
-  margin-left: 1.5rem;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  line-height: 2;
 }
 
-.toggle-pricing__background {
+.toggle-pricing__label--inline-start {
+  padding-right: 5em;
+}
+
+.toggle-pricing__label--inline-end {
+  margin-left: -3.5rem;
+  padding-left: 5em;
+}
+
+.toggle-pricing__label--inline-start::before,
+.toggle-pricing__label--inline-start::after {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  vertical-align: middle;
+  height: 2rem;
+  overflow: hidden;
+  content: "";
+}
+
+/* Wrapper */
+.toggle-pricing__label--inline-start::after {
+  margin: 0 1.5rem;
   border-radius: 2em;
   background-image: var(--primary-gradient);
+  width: 3.5rem;
 }
 
-.toggle-pricing__circle {
+/* Circle */
+.toggle-pricing__label--inline-start::before {
   position: absolute;
   top: 0.25rem;
-  left: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
+  right: -0.075em;
+  transform: translateX(0);
+  z-index: 2;
   border-radius: 50%;
   background-color: var(--white);
+  width: 1.5rem;
+  height: 1.5rem;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .toggle-pricing__circle {
-    transition: left var(--primary-transition);
+  .toggle-pricing__label--inline-start::before {
+    transition: transform var(--primary-transition);
   }
 }
 
+/* Visually hide the radio input */
 .toggle-pricing__radio {
-  cursor: pointer;
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  margin-right: -3px;
+  position: absolute;
   opacity: 0;
+}
+
+.toggle-pricing__radio--annually:checked
+  ~ .toggle-pricing__label--inline-start::before {
+  transform: translateX(-1.5rem);
+}
+
+.toggle-pricing__radio--monthly:checked ~ .toggle-pricing__label--inline-end {
   z-index: 1;
-  position: relative;
 }
 
-.toggle-pricing__radio:focus ~ .toggle-pricing__background {
-  outline: 0.3rem solid var(--soft-blue);
-  outline-offset: 0.6rem;
-}
-
-.toggle-pricing__radio[id="annually"]:checked ~ .toggle-pricing__circle {
-  left: 0.3125rem;
+.toggle-pricing:focus-within .toggle-pricing__label--inline-start::after {
+  box-shadow: 0 0 0 0.15rem var(--very-light-grayish-blue),
+    0 0 0 0.3rem var(--soft-blue);
 }
 
 .card {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--white);
+  margin-right: auto;
+  margin-left: auto;
   box-shadow: 0 1.25rem 2.5rem rgba(212, 210, 244, 0.5);
   border-radius: 0.625rem;
-  line-height: 1.86;
+  background-color: var(--white);
+  padding: 2rem;
   width: 100%;
   max-width: 40rem;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 1.86;
+  text-align: center;
 }
 
 .card + .card {
@@ -228,9 +224,9 @@ ul {
 }
 
 .card--highlight {
+  background-image: var(--primary-gradient);
   padding-top: 3.4375rem;
   padding-bottom: 3.4375rem;
-  background-image: var(--primary-gradient);
   color: var(--white);
 }
 
@@ -242,8 +238,8 @@ ul {
 .card__monthly-price,
 .card__annually-price {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .card__price {
@@ -267,12 +263,9 @@ ul {
 }
 
 .card__item {
+  border-top: 0.0625rem solid var(--grayish-blue-light);
   padding-top: 0.8125rem;
   padding-bottom: 0.8125rem;
-}
-
-.card__item {
-  border-top: 0.0625rem solid var(--grayish-blue-light);
 }
 
 .card__item:last-child {
@@ -285,18 +278,18 @@ ul {
 
 .button {
   display: block;
-  text-decoration-color: transparent;
-  padding: 0.875rem;
   border-radius: 0.375rem;
-  text-transform: uppercase;
+  padding: 0.875rem;
   font-size: 0.8125rem;
   letter-spacing: 0.1em;
+  text-decoration-color: transparent;
+  text-transform: uppercase;
 }
 
 .button--primary-gradient {
+  border: 0.0625rem solid hsl(237deg, 63%, 65%);
   background-image: var(--primary-gradient);
   color: var(--white);
-  border: 0.0625rem solid hsl(237deg, 63%, 65%);
 }
 @media (hover: none) {
   .button--primary-gradient {
@@ -322,9 +315,9 @@ ul {
 }
 
 .button--white {
+  border: 0.0625rem solid var(--white);
   background-color: var(--white);
   color: var(--soft-blue);
-  border: 0.0625rem solid var(--white);
 }
 @media (hover: none) {
   .button--white {
@@ -360,47 +353,47 @@ ul {
 }
 
 .bonus__label::after {
-  content: "Monthly";
   position: absolute;
   top: 0;
   right: -11rem;
+  content: "Monthly";
 }
 
 .bonus__toggle {
-  z-index: 1;
   display: inline-block;
-  width: 3.5rem;
-  height: 2rem;
   vertical-align: middle;
-  border-radius: 2em;
+  z-index: 1;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
+  border-radius: 2em;
+  width: 3.5rem;
+  height: 2rem;
 }
 
 .bonus__toggle::after,
 .bonus__toggle::before {
-  content: "";
   position: absolute;
+  content: "";
 }
 
 .bonus__toggle::after {
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   border-radius: 2em;
   background-image: var(--primary-gradient);
+  width: 100%;
+  height: 100%;
 }
 
 .bonus__toggle::before {
   top: 0.25rem;
   left: 0;
   transform: translateX(115%);
-  width: 1.5rem;
-  height: 1.5rem;
+  z-index: 2;
   border-radius: 50%;
   background-color: var(--white);
-  z-index: 2;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 @media (prefers-reduced-motion: no-preference) {
   .bonus__toggle::before {
