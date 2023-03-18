@@ -177,6 +177,31 @@ At small screen sizes, the toggle component will be outside the user's viewport 
 
 I am interested in seeing how other people completed the challenge with HTML and CSS only. If there is someone who can create a robust solution, then I will update this section and improve my site.
 
+## Color contrast
+
+There is a color contrast issue with the original design. The labels for the toggle button which are "Annually" and "Monthly" texts don't have enough contrast.
+
+I used the Chrome Developer tool to inspect the color of the original design. I got `#d5d6dd` as the color value.
+
+As a side note, it is not the actual color code. The actual color code is `hsl(232, 13%, 49%)` and with `opacity: 50%`. So, the color code that I got was the result of the original color with reduced opacity.
+
+I decided to test the contrast of the labels' original color (`#d5d6dd`) with the body's background color (`#f6f6fe`) using [Colorable](https://colorable.jxnblk.com/). The result is `Aa 1.35 Fail`. It has a very low contrast.
+
+With that in mind, I decided to use the body's text color for those labels. This way, those labels have enough contrast. The result is `Aa 7.87 AAA` for the contrast between `#494c5f` (body's text color) and `#d5d6dd`.
+
+Related resources for this section:
+
+- [What's 'large text' in WCAG 2.0 parlance? - TPGi](https://www.tpgi.com/whats-large-text-in-wcag-2-0-parlance/)
+- [Understanding Success Criterion 1.4.3: Contrast (Minimum) | WAI | W3C](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum)
+
+### More issues
+
+I found more contrast issues after I tried running a contrast check on Firefox. The text inside the professional card and all the "learn more" buttons have not enough contrast.
+
+![Screenshot of a contrast issue list with nine items](./images/contrast-issues-from-firefox.png)
+
+I may try to fix the issue by changing the colors. But, that would make my site looks different from the original design. So, with making the objective—of making my site look as close as possible to the original design—in mind, I let these issues exist.
+
 ## About me
 
 At Frontend Mentor, I have completed over 30 projects and written over 1500 code reviews. I am also one of the top 10 developers on the All Time Wall of Fame.
