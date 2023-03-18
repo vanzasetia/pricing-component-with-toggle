@@ -124,8 +124,13 @@ ul {
   max-width: 15rem;
 }
 
+/**
+ * 1. Center the "Our Pricing" text on Firefox
+ */
 .toggle-pricing__legend {
+  margin-right: auto; /* 1 */
   margin-bottom: 2.5rem;
+  margin-left: auto; /* 1 */
   text-align: center;
 }
 
