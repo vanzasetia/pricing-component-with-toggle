@@ -31,7 +31,7 @@ My users should be able to:
 
 - [Pricing Component with Toggle | Frontend Mentor Challenge](https://sitepricingcomponent.netlify.app/)
 - [HTML and CSS only Pricing Component with Toggle | Frontend Mentor Bonus Challenge](https://sitepricingcomponent.netlify.app/bonus)
-- [Frontend Mentor solution page]()
+- [Frontend Mentor solution page](https://www.frontendmentor.io/solutions/pricing-component-with-toggle-progressive-enhancement-PBaxEGerju)
 - [Documentation](./docs/README.md)
 
 ## Screenshots
