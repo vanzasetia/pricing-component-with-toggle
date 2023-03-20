@@ -35,6 +35,13 @@ This is the place where I put all the resources that I find useful to build this
 
 ## Validations
 
+- [Showing results for https://sitepricingcomponent.netlify.app/ - Nu Html Checker](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsitepricingcomponent.netlify.app%2F)
+- [W3C CSS Validator results for https://sitepricingcomponent.netlify.app/ (CSS level 3 + SVG)](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsitepricingcomponent.netlify.app%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- [Report for https://sitepricingcomponent.netlify.app/ - PageSpeed Insights](https://pagespeed.web.dev/analysis/https-sitepricingcomponent-netlify-app/04yyvm4kn7)
+- [WAVE Report of Pricing Component with Toggle | Frontend Mentor Challenge](https://wave.webaim.org/report#/https://sitepricingcomponent.netlify.app/)
+- [W3C Link Checker: https://sitepricingcomponent.netlify.app/](https://validator.w3.org/checklink?uri=https%3A%2F%2Fsitepricingcomponent.netlify.app%2F&hide_type=all&depth=&check=Check)
+- [Meta Tags — Preview, Edit and Generate](https://metatags.io/)
+
 ## Others
 
 - [Toggle Component (made by me)](https://codepen.io/vanzasetia/pen/BaOwJjd)
