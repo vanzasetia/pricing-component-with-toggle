@@ -200,7 +200,7 @@ I found more contrast issues after I tried running a contrast check on Firefox. 
 
 ![Screenshot of a contrast issue list with nine items](./images/contrast-issues-from-firefox.png)
 
-I may try to fix the issue by changing the colors. But, that would make my site looks different from the original design. So, with making the objective—of making my site look as close as possible to the original design—in mind, I let these issues exist.
+I can try to fix the issue by changing the colors. But, that would make my site looks different from the original design. So, with the objective—of making my site look as close as possible to the original design—in mind, I let these issues exist.
 
 ## About me
 
