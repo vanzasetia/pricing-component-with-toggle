@@ -47,7 +47,7 @@ This is the place where I put all the resources that I find useful to build this
 - [Toggle Component (made by me)](https://codepen.io/vanzasetia/pen/BaOwJjd)
 - [Pricing Component (made by me)](https://codepen.io/vanzasetia/pen/eYLRrwd)
 - [Toggle Component with no JS (made by me)](https://codepen.io/vanzasetia/pen/xxapPjW)
-- [Radio Toggle Switch](https://codepen.io/scottohara/pen/zLZwNv/)
-- [Accessible Option(/Toggle) Switch](https://codepen.io/SaraSoueidan/pen/jpBbrq/) - I follow this HTML structure for the toggle component.
+- [Radio Toggle Switch](https://codepen.io/scottohara/pen/zLZwNv/) - I follow this HTML structure for the toggle component.
+- [Accessible Option(/Toggle) Switch](https://codepen.io/SaraSoueidan/pen/jpBbrq/)
 - [Switch web component](https://codepen.io/scottohara/pen/YdKQQE/)
 - [Toggle](https://codepen.io/KittyGiraudel/pen/xxgrPvg)
