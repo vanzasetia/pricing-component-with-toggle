@@ -210,6 +210,20 @@ I found the solution in Stack Overflow. [css - Custom Checkboxes Failing on Fire
 
 I need to add `-moz-appearance: initial`. That should make the custom checkbox styling work in Firefox.
 
+## Firefox likes more code at the moment
+
+I found a better solution for the bonus challenge.
+
+I can use `:has()` pseudo-class selector to toggle the prices with CSS.
+
+But, by the time I am writing this, Firefox does not support `:has()`—it is supported behind the flag.
+
+The previous solution is still the solution for the Firefox—the checkbox version.
+
+See the checkbox version — [HTML and CSS only Pricing Component with Checkbox](https://641faa57c898580008ed1881--sitepricingcomponent.netlify.app/bonus)
+
+[:has() CSS relational pseudo-class | Can I use... Support tables for HTML5, CSS3, etc](https://caniuse.com/css-has)
+
 ## About me
 
 At Frontend Mentor, I have completed over 30 projects and written over 1500 code reviews. I am also one of the top 10 developers on the All Time Wall of Fame.
