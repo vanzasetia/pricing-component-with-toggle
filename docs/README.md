@@ -4,8 +4,8 @@ This is the place where I put all the resources that I find useful to build this
 
 ## Web documentations
 
-- [<fieldset>: The Field Set element - HTML: HyperText Markup Language | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
-- [<legend>: The Field Set Legend element - HTML: HyperText Markup Language | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend)
+- [`<fieldset>`: The Field Set element - HTML: HyperText Markup Language | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
+- [`<legend>`: The Field Set Legend element - HTML: HyperText Markup Language | MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend)
 - [HTMLElement: change event - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event)
 - [HTMLElement: input event - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event)
 - [Element.replaceChildren() - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/replaceChildren)
