@@ -100,6 +100,7 @@ ul {
 }
 
 .pricing__title {
+  margin-bottom: 2.5rem;
   font-size: 2rem;
   text-align: center;
 }
@@ -353,10 +354,6 @@ ul {
 .attribution__link {
   color: inherit;
   text-underline-offset: 0.3em;
-}
-
-.bonus__title {
-  margin-bottom: 2.5rem;
 }
 
 .bonus__annually-price {

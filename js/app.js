@@ -1,12 +1,8 @@
 (function (doc) {
   "use strict";
-  const app = doc.querySelector(".js-app");
-  const appTitle = app.querySelector(".js-app-title");
+  const appTitle = doc.querySelector(".js-app-title");
   const togglePricingMarkup = `
-  <fieldset class="toggle-pricing">
-    <legend
-      class="toggle-pricing__legend js-toggle-pricing-legend"
-    ></legend>
+  <div class="toggle-pricing">
     <input
       type="radio"
       name="pricing"
@@ -32,11 +28,9 @@
     >
       Monthly
     </label>
-  </fieldset>
+  </div>
   `;
-  app.insertAdjacentHTML("afterbegin", togglePricingMarkup);
-  const togglePricingLegend = app.querySelector(".js-toggle-pricing-legend");
-  togglePricingLegend.appendChild(appTitle);
+  appTitle.insertAdjacentHTML("afterend", togglePricingMarkup);
 })(document);
 
 (function (doc) {
