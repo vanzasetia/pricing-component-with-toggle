@@ -1,82 +1,15 @@
-@use "../abstracts" as *;
-
-.bonus__label,
-.bonus__toggle {
-  position: relative;
-  top: 2rem;
-  left: 33%;
-  cursor: pointer;
-
-  @include breakpoint-up("tiny") {
-    left: 38%;
-  }
-}
-
-.bonus__label::after {
-  position: absolute;
-  top: 0;
-  right: -11rem;
-  content: "Monthly";
-}
-
-.bonus__toggle {
-  display: inline-block;
-  vertical-align: middle;
-  appearance: initial;
-  z-index: 1;
-  margin-right: rem(24);
-  margin-left: rem(24);
-  border-radius: 2em;
-  width: rem(56);
-  height: rem(32);
-}
-
-.bonus__toggle::after,
-.bonus__toggle::before {
-  position: absolute;
-  content: "";
-}
-
-.bonus__toggle::after {
-  top: 0;
-  left: 0;
-  border-radius: 2em;
-  background-image: var(--primary-gradient);
-  width: 100%;
-  height: 100%;
-}
-
-.bonus__toggle::before {
-  top: rem(4);
-  left: 0;
-  transform: translateX(115%);
-  z-index: 2;
-  border-radius: 50%;
-  background-color: var(--white);
-  width: rem(24);
-  height: rem(24);
-
-  @include prefers-motion {
-    transition: transform var(--primary-transition);
-  }
-}
-
-.bonus__toggle:checked::before {
-  transform: translateX(rem(5));
-}
-
-.bonus__wrapper {
-  position: relative;
+.bonus__title {
+  margin-bottom: 2.5rem;
 }
 
 .bonus__annually-price {
   display: none;
 }
 
-.bonus__toggle:checked ~ .pricing__container .bonus__annually-price {
+.bonus:has(.toggle-pricing__radio--annually:checked) .bonus__annually-price {
   display: flex;
 }
 
-.bonus__toggle:checked ~ .pricing__container .bonus__monthly-price {
+.bonus:has(.toggle-pricing__radio--annually:checked) .bonus__monthly-price {
   display: none;
 }

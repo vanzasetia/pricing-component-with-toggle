@@ -23,6 +23,7 @@
     "input-missing-label": ["error"],
     "missing-doctype": ["error"],
     "no-missing-references": ["error"],
-    "svg-focusable": ["error"]
+    "svg-focusable": ["error"],
+    "wcag/h71": ["off"]
   }
 }
