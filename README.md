@@ -202,6 +202,14 @@ I found more contrast issues after I tried running a contrast check on Firefox. 
 
 I can try to fix the issue by changing the colors. But, that would make my site looks different from the original design. So, with the objective—of making my site look as close as possible to the original design—in mind, I let these issues exist.
 
+## Firefox hates custom checkbox
+
+![Screenshot of my solution for the bonus challenge at Firefox. Showing unstyled checkbox input.](./screenshots/screenshot-bonus-challenge-at-firefox.jpg)
+
+I found the solution in Stack Overflow. [css - Custom Checkboxes Failing on Firefox - Stack Overflow](https://stackoverflow.com/questions/18400493/custom-checkboxes-failing-on-firefox)
+
+I need to add `-moz-appearance: initial`. That should make the custom checkbox styling work in Firefox.
+
 ## About me
 
 At Frontend Mentor, I have completed over 30 projects and written over 1500 code reviews. I am also one of the top 10 developers on the All Time Wall of Fame.
