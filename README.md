@@ -16,6 +16,12 @@ I did this challenge to practice applying progressive enhancement by:
 
 Also, I want to practice using React. I think it would be better if I had done the challenge with the technologies that I usually use first. Then, I will be able to focus on the React instead of thinking about everything from scratch.
 
+## Disclaimer
+
+This project is solely for learning purposes. I take no any responsibility or liability for the accuracy, completeness, or usefulness of any information provided in this project. You should not use it as a reference for creating your project.
+
+I am currently no longer working on this project.
+
 ## The challenge
 
 My challenge is to build out this pricing component and get it looking as close to the design as possible.
